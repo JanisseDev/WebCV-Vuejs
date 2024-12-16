@@ -1,0 +1,64 @@
+<script setup>
+import { ref, provide } from 'vue'
+import Cv from './Cv.vue'
+
+const showLink = ref(true);
+provide('showLink', showLink);
+
+const showMonth = ref(false);
+provide('showMonth', showMonth);
+
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
+function printCv() {
+    let mywindow = window.open(' ', 'PRINT', 'height=1188,width=840,top=0,left=0');
+
+    mywindow.document.write('<html>');
+    mywindow.document.write(document.head.innerHTML);
+    mywindow.document.write('<body style="margin:0; padding:0; background-color:white";>');
+    mywindow.document.write(document.getElementsByClassName("printable")[0].outerHTML);
+    mywindow.document.write('</body></html>');
+
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10*/
+
+    mywindow.onload = async function () {
+        await delay(200);
+        mywindow.print();
+        mywindow.close();
+    }
+
+    return true;
+}
+
+function toggleLinks() {
+  showLink.value = !showLink.value;
+}
+
+function toggleMonths() {
+  showMonth.value = !showMonth.value;
+}
+</script>
+
+<template>
+  <main>
+    <Cv class="printable"/>
+    <div class="options">
+      <button @click="printCv">Print</button>
+      <button @click="toggleLinks">Toggle links</button>
+      <button @click="toggleMonths">Toggle Months</button>
+    </div>
+  </main>
+</template>
+
+<style scoped>
+main {
+  display: flex;
+  gap: 10px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+</style>
