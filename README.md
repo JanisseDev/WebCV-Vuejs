@@ -1,6 +1,6 @@
 # WebCV-vuejs
 
-My custom resume tool made with Vue 3 in Vite.
+A custom resume tool made with Vue 3 in Vite.
 
 ## Project Setup
 
