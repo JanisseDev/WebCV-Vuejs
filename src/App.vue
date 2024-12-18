@@ -1,5 +1,5 @@
 <script setup>
-import { ref, provide } from 'vue'
+import { ref, onMounted, provide, watch } from 'vue'
 import Cv from './Cv.vue'
 
 const showLink = ref(true);
@@ -7,6 +7,27 @@ provide('showLink', showLink);
 
 const showMonth = ref(false);
 provide('showMonth', showMonth);
+
+const phone = ref('');
+provide('phone', phone);
+watch(phone, (value) => {
+  localStorage.phone = value;
+});
+
+const mail = ref('');
+provide('mail', mail);
+watch(mail, (value) => {
+  localStorage.mail = value;
+});
+
+onMounted(() => {
+  if(localStorage.phone) {
+    phone.value = localStorage.phone;
+  }
+  if(localStorage.mail) {
+    mail.value = localStorage.mail;
+  }
+})
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -47,6 +68,9 @@ function toggleMonths() {
       <button @click="printCv">Print</button>
       <button @click="toggleLinks">Toggle links</button>
       <button @click="toggleMonths">Toggle Months</button>
+      <br>
+      <input v-model="phone" placeholder="phone number" />
+      <input v-model="mail" placeholder="mail address" />
     </div>
   </main>
 </template>

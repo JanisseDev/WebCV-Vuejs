@@ -1,5 +1,8 @@
 <script setup>
-import SensibleInfo from '@/sensibleInfo.js'
+import { inject } from 'vue'
+
+const phone = inject('phone');
+const mail = inject('mail');
 </script>
 
 <template>
@@ -13,8 +16,8 @@ import SensibleInfo from '@/sensibleInfo.js'
             <h1>Permis B</h1>
             <h1>30 ans</h1>
             <br>
-            <h1>{{SensibleInfo.phone}}</h1>
-            <h1>{{SensibleInfo.mail}}</h1>
+            <h1>{{phone}}</h1>
+            <h1>{{mail}}</h1>
         </div>
     </div>
     <div class="wave-mask"></div>
