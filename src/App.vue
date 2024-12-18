@@ -5,6 +5,9 @@ import Cv from './Cv.vue'
 const showLink = ref(true);
 provide('showLink', showLink);
 
+const thickerText = ref(false);
+provide('thickerText', thickerText);
+
 const showMonth = ref(false);
 provide('showMonth', showMonth);
 
@@ -56,8 +59,17 @@ function toggleLinks() {
   showLink.value = !showLink.value;
 }
 
+function toggleThickerText() {
+  thickerText.value = !thickerText.value;
+}
+
 function toggleMonths() {
   showMonth.value = !showMonth.value;
+}
+
+function optimizePrint() {
+  showLink.value = false;
+  thickerText.value = true;
 }
 </script>
 
@@ -67,7 +79,10 @@ function toggleMonths() {
     <div class="options">
       <button @click="printCv">Print</button>
       <button @click="toggleLinks">Toggle links</button>
+      <button @click="toggleThickerText">Toggle thicker texts</button>
       <button @click="toggleMonths">Toggle Months</button>
+      <br>
+      <button @click="optimizePrint">Optimize print</button>
       <br>
       <input v-model="phone" placeholder="phone number" />
       <input v-model="mail" placeholder="mail address" />

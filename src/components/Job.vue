@@ -45,6 +45,7 @@ defineProps({
 })
 
 const showMonth = inject('showMonth');
+const thickerText = inject('thickerText');
 </script>
 
 <template>
@@ -55,7 +56,7 @@ const showMonth = inject('showMonth');
                 <p class="font-date" v-if="startYear">-</p>
                 <p class="font-date">{{ (showMonth && endMonth) ? endMonth+' ' : '' }} {{ endYear }}</p>
             </div>
-            <p class="font-place" v-for="(place) in places">{{ place }}</p>
+            <p class="font-place" :class="{ 'font-place-thicker': thickerText }" v-for="(place) in places">{{ place }}</p>
         </div>
         <div class="right">
             <div class="row">
@@ -149,6 +150,10 @@ const showMonth = inject('showMonth');
     font-weight: 100;
     font-size: 0.7rem;
     letter-spacing: 0rem;
+}
+
+.font-place-thicker {
+    font-weight: 300;
 }
 
 .font-title {
