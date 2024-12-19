@@ -8,6 +8,9 @@ provide('showLink', showLink);
 const thickerText = ref(false);
 provide('thickerText', thickerText);
 
+const colorless = ref(false);
+provide('colorless', colorless);
+
 const showMonth = ref(false);
 provide('showMonth', showMonth);
 
@@ -63,6 +66,10 @@ function toggleThickerText() {
   thickerText.value = !thickerText.value;
 }
 
+function toggleColorless() {
+  colorless.value = !colorless.value;
+}
+
 function toggleMonths() {
   showMonth.value = !showMonth.value;
 }
@@ -80,6 +87,7 @@ function optimizePrint() {
       <button @click="printCv">Print</button>
       <button @click="toggleLinks">Toggle links</button>
       <button @click="toggleThickerText">Toggle thicker texts</button>
+      <button @click="toggleColorless">Toggle colorless mode</button>
       <button @click="toggleMonths">Toggle Months</button>
       <br>
       <button @click="optimizePrint">Optimize print</button>

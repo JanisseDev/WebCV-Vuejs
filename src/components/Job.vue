@@ -46,6 +46,7 @@ defineProps({
 
 const showMonth = inject('showMonth');
 const thickerText = inject('thickerText');
+const colorless = inject('colorless');
 </script>
 
 <template>
@@ -69,7 +70,7 @@ const thickerText = inject('thickerText');
             <div class="row">
                 <p class="font-subtitle team-icon" v-if="teamSize">Équipe: {{ teamSize }}</p>
                 <p class="font-subtitle" v-if="teamSize">-</p>
-                <p class="tag" v-for="(tag) in tags">{{ tag }}</p>
+                <p class="tag" :class="{'tag-colorless': colorless}" v-for="(tag) in tags">{{ tag }}</p>
             </div>
             <slot></slot>
         </div>
@@ -122,6 +123,14 @@ const thickerText = inject('thickerText');
     color: white;
     padding: 2px 8px;
     border-radius: 10vh;
+}
+
+.tag-colorless {
+    color: black;
+    background: none;
+    border-color: black;
+    border: 1px solid;
+    margin: -1px;
 }
 
 .team-icon::before {
