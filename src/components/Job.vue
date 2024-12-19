@@ -130,7 +130,7 @@ const colorless = inject('colorless');
     background: none;
     border-color: black;
     border: 1px solid;
-    margin: -1px;
+    padding: 1px 7px;
 }
 
 .team-icon::before {
