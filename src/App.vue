@@ -17,21 +17,21 @@ provide('showMonth', showMonth);
 const phone = ref('');
 provide('phone', phone);
 watch(phone, (value) => {
-  localStorage.phone = value;
+  localStorage.cv_phone = value;
 });
 
 const mail = ref('');
 provide('mail', mail);
 watch(mail, (value) => {
-  localStorage.mail = value;
+  localStorage.cv_mail = value;
 });
 
 onMounted(() => {
-  if(localStorage.phone) {
-    phone.value = localStorage.phone;
+  if(localStorage.cv_phone) {
+    phone.value = localStorage.cv_phone;
   }
-  if(localStorage.mail) {
-    mail.value = localStorage.mail;
+  if(localStorage.cv_mail) {
+    mail.value = localStorage.cv_mail;
   }
 })
 

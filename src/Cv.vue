@@ -6,6 +6,7 @@ import Header from './components/Header.vue'
 import Skills from './components/Skills.vue'
 import Section from './components/Section.vue'
 import Job from './components/Job.vue'
+import Project from './components/Project.vue'
 import Formation from './components/Formation.vue'
 
 const showLink = inject('showLink');
@@ -25,7 +26,7 @@ const showLink = inject('showLink');
             <div class="main-column">
                 <p class="description">Passionné et créatif, je suis constamment à la recherche de nouvelles technologies. Doté d'un tempérament calme et patient, ma proactivité me permet d'être efficace aussi bien en autonomie qu'au sein d'une équipe. Mon engagement envers l'innovation et mon approche méthodique feront de moi un atout précieux pour vos projets.</p>
                 
-                <Section title="EXPÉRIENCES PROFESSIONNELLES">
+                <Section title="DOSSIER DE COMPÉTENCES">
                 <Job title="OPUSCOPE"
                 startMonth="Mai"
                 startYear="2021"
@@ -33,13 +34,14 @@ const showLink = inject('showLink');
                 endYear="2024"
                 :places="['Full télétravail', 'France']"
                 jobType="CDI"
-                subtitle="Développeur natif iOS AR & Meta Quest VR"
-                teamSize="20+"
-                :tags="['Swift', 'Rx', 'MongoDB', 'C#', 'Mobile', 'Git', 'XR', 'Unity']">
-                    <p class="description text-indent"><a href="https://www.youtube.com/watch?v=u54OMrF5XqI" target="_blank" class="link" :class="{'link-icon': showLink}">Développement frontend via Swift & UIKit de l'application 'Mappn'.</a></p>
-                    <p class="description text-indent">Requêtes à la base de données via MongoDB Realm FlexibleSync.</p>
-                    <p class="description text-indent">Communication avec Unity (Unity as a Service) pour les phases 3D en réalité augmentée.</p>
-                    <p class="description text-indent">Développent d'interface VR pour l'application 'Minsar studio'.</p>
+                subtitle="Développeur natif iOS AR & Meta Quest VR">
+                    <Project teamSize="20+"
+                    :tags="['Swift', 'Rx', 'MongoDB', 'C#', 'Mobile', 'Git', 'XR', 'Unity']">
+                        <p class="description text-indent"><a href="https://www.youtube.com/watch?v=u54OMrF5XqI" target="_blank" class="link" :class="{'link-icon': showLink}">Développement frontend via Swift & UIKit de l'application 'Mappn'.</a></p>
+                        <p class="description text-indent">Requêtes à la base de données via MongoDB Realm FlexibleSync.</p>
+                        <p class="description text-indent">Communication avec Unity (Unity as a Service) pour les phases 3D en réalité augmentée.</p>
+                        <p class="description text-indent">Développent d'interface VR pour l'application 'Minsar studio'.</p>
+                    </Project>
                 </Job>
                 <Job title="FULL CYCLE GAMES"
                 startMonth="Fév."
@@ -48,12 +50,13 @@ const showLink = inject('showLink');
                 endYear="2020"
                 :places="['Vaulx-en-Velin', 'France']"
                 jobType="CDI"
-                subtitle="Développeur jeu mobile en ligne en temps réel"
-                teamSize="8"
-                :tags="['C#', 'Mobile', 'Git', 'Multijoueur', 'Unity']">
-                    <p class="description text-indent"><a href="https://www.youtube.com/watch?v=vSwRtdF4hM0" target="_blank" class="link" :class="{'link-icon': showLink}">Conception du client Unity du jeu mobile multijoueur 'Gleem Lands'.</a></p>
-                    <p class="description text-indent">Création d'outils et de shaders.</p>
-                    <p class="description text-indent">Communication avec le backend via différents protocoles réseaux (API / WebSocket / UDP).</p>
+                subtitle="Développeur jeu mobile en ligne en temps réel">
+                    <Project teamSize="8"
+                    :tags="['C#', 'Mobile', 'Git', 'Multijoueur', 'Unity']">
+                        <p class="description text-indent"><a href="https://www.youtube.com/watch?v=vSwRtdF4hM0" target="_blank" class="link" :class="{'link-icon': showLink}">Conception du client Unity du jeu mobile multijoueur 'Gleem Lands'.</a></p>
+                        <p class="description text-indent">Création d'outils et de shaders.</p>
+                        <p class="description text-indent">Communication avec le backend via différents protocoles réseaux (API / WebSocket / UDP).</p>
+                    </Project>
                 </Job>
                 <Job title="GERCOP DIGITAL"
                 startMonth="Fév."
@@ -62,11 +65,12 @@ const showLink = inject('showLink');
                 endYear="2017"
                 :places="['Lyon', 'France']"
                 jobType="CDI"
-                subtitle="Développeur d'application d'aide à la vente immobilière"
-                teamSize="2"
-                :tags="['C#', 'Mobile', 'Git', 'VR', 'Unity']">
-                    <p class="description text-indent">Développement d'applications mobiles 3D sur Unity pour la présentation de biens immobiliers.</p>
-                    <p class="description text-indent"><a href="https://www.youtube.com/watch?v=_QBolkK5HW8" target="_blank" class="link" :class="{'link-icon': showLink}">Création de visite virtuelle immersive (HTC Vive), permettant à l'utilisateur de personnaliser son intérieur.</a></p>
+                subtitle="Développeur d'application d'aide à la vente immobilière">
+                    <Project teamSize="2"
+                    :tags="['C#', 'Mobile', 'Git', 'VR', 'Unity']">
+                        <p class="description text-indent">Développement d'applications mobiles 3D sur Unity pour la présentation de biens immobiliers.</p>
+                        <p class="description text-indent"><a href="https://www.youtube.com/watch?v=_QBolkK5HW8" target="_blank" class="link" :class="{'link-icon': showLink}">Création de visite virtuelle immersive (HTC Vive), permettant à l'utilisateur de personnaliser son intérieur.</a></p>
+                    </Project>
                 </Job>
                 <Job title="BREAKFIRST"
                 startMonth="Sept."
@@ -75,12 +79,13 @@ const showLink = inject('showLink');
                 endYear="2015"
                 :places="['Lyon', 'France']"
                 jobType="Alternance"
-                subtitle="Développeur jeu mobile AR"
-                teamSize="6"
-                :tags="['C#','Mobile', 'Git', 'AR', 'Unity']">
-                    <p class="description text-indent">Développement de gameplay en réalité augmenté via la caméra frontale des mobiles.</p>
-                    <p class="description text-indent">Intégration d'assets graphiques (UI/modèles 3D) et audio (FX/musique).</p>
-                    <p class="description text-indent">Implémentation de features sur le moteur interne du studio.</p>
+                subtitle="Développeur jeu mobile AR">
+                    <Project teamSize="6"
+                    :tags="['C#', 'Mobile', 'Git', 'AR', 'Unity']">
+                        <p class="description text-indent">Développement de gameplay en réalité augmenté via la caméra frontale des mobiles.</p>
+                        <p class="description text-indent">Intégration d'assets graphiques (UI/modèles 3D) et audio (FX/musique).</p>
+                        <p class="description text-indent">Implémentation de features sur le moteur interne du studio.</p>
+                    </Project>
                 </Job>
                 <Job title="CRSNG ESSILOR"
                 startMonth="Avril"
@@ -92,8 +97,11 @@ const showLink = inject('showLink');
                 subtitle="Développeur projet de recherche"
                 teamSize="4"
                 :tags="['C#', 'Git', 'VR', 'Unity']">
-                    <p class="description text-indent">Développement d'un simulateur de foule sur une salle immersive (CAVE) pour la Chaire industrielle CRSNG-Essilor.</p>
-                    <p class="description text-indent">Synchronisation de la simulation à travers les différents clusters du CAVE.</p>
+                    <Project teamSize="4"
+                    :tags="['C#', 'Git', 'VR', 'Unity']">
+                        <p class="description text-indent">Développement d'un simulateur de foule sur une salle immersive (CAVE) pour la Chaire industrielle CRSNG-Essilor.</p>
+                        <p class="description text-indent">Synchronisation de la simulation à travers les différents clusters du CAVE.</p>
+                    </Project>
                 </Job>
                 </Section>
 
@@ -114,15 +122,17 @@ const showLink = inject('showLink');
                 <Section title="PROJETS PERSONNELS">
                 <Job title="BOARD GAME TOOLBOX"
                 endYear="2024"
-                subtitle="Développeur .Net MAUI"
-                :tags="['C#', '.Net MAUI', 'Rx', 'LiteDB', 'Mobile', 'Git']">
-                    <p class="description text-indent"><a href="https://github.com/JanisseDev/ScoreTracker" target="_blank" class="link" :class="{'link-icon': showLink}">Développement d'une application compagnon open source pour des jeux de societé.</a></p>
+                subtitle="Développeur .Net MAUI">
+                    <Project :tags="['C#', '.Net MAUI', 'Rx', 'LiteDB', 'Mobile', 'Git']">
+                        <p class="description text-indent"><a href="https://github.com/JanisseDev/ScoreTracker" target="_blank" class="link" :class="{'link-icon': showLink}">Développement d'une application compagnon open source pour des jeux de societé.</a></p>
+                    </Project>
                 </Job>
                 <Job title="MONTURE ÉQUATORIALE MOTORISÉE"
                 endYear="2023"
-                subtitle="Designer Impression 3D & Développeur C++"
-                :tags="['C++', 'HTML', 'Fusion 360', 'Impression 3D', 'Raspberry Pico W', 'Git']">
-                    <p class="description text-indent"><a href="https://github.com/JanisseDev/motorized-equatorial-mount" target="_blank" class="link" :class="{'link-icon': showLink}">Design & Développement d'une monture équatoriale motorisée pilotable via un smartphone en Wifi.</a></p>
+                subtitle="Designer Impression 3D & Développeur C++">
+                    <Project :tags="['C++', 'HTML', 'Fusion 360', 'Impression 3D', 'Raspberry Pico W', 'Git']">
+                        <p class="description text-indent"><a href="https://github.com/JanisseDev/motorized-equatorial-mount" target="_blank" class="link" :class="{'link-icon': showLink}">Design & Développement d'une monture équatoriale motorisée pilotable via un smartphone en Wifi.</a></p>
+                    </Project>
                 </Job>
                 </Section>
             </div>
