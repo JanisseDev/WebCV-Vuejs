@@ -15,13 +15,15 @@ defineProps({
 const colorless = inject('colorless');
 </script>
 
-<template class="main">
-    <div class="row">
-        <p class="font-subtitle team-icon" v-if="teamSize">Équipe: {{ teamSize }}</p>
-        <p class="font-subtitle" v-if="teamSize">-</p>
-        <p class="tag" :class="{'tag-colorless': colorless}" v-for="(tag) in tags">{{ tag }}</p>
+<template>
+    <div class="main">
+        <div class="row">
+            <p class="font-subtitle team-icon" v-if="teamSize">Équipe: {{ teamSize }}</p>
+            <p class="font-subtitle" v-if="teamSize">-</p>
+            <p class="tag" :class="{'tag-colorless': colorless}" v-for="(tag) in tags">{{ tag }}</p>
+        </div>
+        <slot></slot>
     </div>
-    <slot></slot>
 </template>
 
 <style scoped>

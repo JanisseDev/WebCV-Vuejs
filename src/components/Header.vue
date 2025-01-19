@@ -56,6 +56,7 @@ const colorless = inject('colorless');
     background: white;
     clip-path: path("M0 38L21.5 39.3C43 40.7 86 43.3 128.8 39.7C171.7 36 214.3 26 257.2 20.3C300 14.7 343 13.3 385.8 16.7C428.7 20 471.3 28 514.2 32.8C557 37.7 600 39.3 642.8 37.8C685.7 36.3 728.3 31.7 771.2 26.8C814 22 857 17 878.5 14.5L900 12L900 51L878.5 51C857 51 814 51 771.2 51C728.3 51 685.7 51 642.8 51C600 51 557 51 514.2 51C471.3 51 428.7 51 385.8 51C343 51 300 51 257.2 51C214.3 51 171.7 51 128.8 51C86 51 43 51 21.5 51L0 51Z");
     height: var(--wave-height);
+    min-height: var(--wave-height);
     z-index: 10;
     padding-bottom: 1px; /* Magic value: Avoid pixel fighting */
 }

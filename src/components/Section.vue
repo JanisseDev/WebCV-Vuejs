@@ -28,7 +28,7 @@ defineProps({
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-    gap: calc(20px);
+    gap: 20px;
     flex: 0;
 }
 
