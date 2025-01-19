@@ -87,22 +87,6 @@ const showLink = inject('showLink');
                         <p class="description text-indent">Implémentation de features sur le moteur interne du studio.</p>
                     </Project>
                 </Job>
-                <Job title="CRSNG ESSILOR"
-                startMonth="Avril"
-                startYear="2014"
-                endMonth="Juin"
-                endYear="2014"
-                :places="['Montréal', 'Canada']"
-                jobType="Stage"
-                subtitle="Développeur projet de recherche"
-                teamSize="4"
-                :tags="['C#', 'Git', 'VR', 'Unity']">
-                    <Project teamSize="4"
-                    :tags="['C#', 'Git', 'VR', 'Unity']">
-                        <p class="description text-indent">Développement d'un simulateur de foule sur une salle immersive (CAVE) pour la Chaire industrielle CRSNG-Essilor.</p>
-                        <p class="description text-indent">Synchronisation de la simulation à travers les différents clusters du CAVE.</p>
-                    </Project>
-                </Job>
                 </Section>
 
                 <Section title="FORMATIONS">
@@ -120,17 +104,27 @@ const showLink = inject('showLink');
                 </Section>
 
                 <Section title="PROJETS PERSONNELS">
+                <Job title="TRIGGER MOVIE"
+                endYear="2025"
+                subtitle="Développeur fullstack Vue.js & PHP">
+                    <Project teamSize="1"
+                    :tags="['Vue.js', 'PHP', 'MariaDB', 'Git']">
+                        <p class="description text-indent"><a href="https://maroon-dog-827220.hostingersite.com/" target="_blank" class="link" :class="{'link-icon': showLink}">Design et Développement d'une plateforme collaborative où les utilisateurs ajoutent des avertissements aux films pour des expériences cinématographiques plus sûres et éclairées.</a></p>
+                    </Project>
+                </Job>
                 <Job title="BOARD GAME TOOLBOX"
                 endYear="2024"
                 subtitle="Développeur .Net MAUI">
-                    <Project :tags="['C#', '.Net MAUI', 'Rx', 'LiteDB', 'Mobile', 'Git']">
+                    <Project teamSize="1"
+                    :tags="['C#', '.Net MAUI', 'Rx', 'LiteDB', 'Mobile', 'Git']">
                         <p class="description text-indent"><a href="https://github.com/JanisseDev/ScoreTracker" target="_blank" class="link" :class="{'link-icon': showLink}">Développement d'une application compagnon open source pour des jeux de societé.</a></p>
                     </Project>
                 </Job>
                 <Job title="MONTURE ÉQUATORIALE MOTORISÉE"
                 endYear="2023"
                 subtitle="Designer Impression 3D & Développeur C++">
-                    <Project :tags="['C++', 'HTML', 'Fusion 360', 'Impression 3D', 'Raspberry Pico W', 'Git']">
+                    <Project teamSize="1"
+                    :tags="['C++', 'HTML', 'Fusion 360', 'Impression 3D', 'Raspberry Pico W', 'Git']">
                         <p class="description text-indent"><a href="https://github.com/JanisseDev/motorized-equatorial-mount" target="_blank" class="link" :class="{'link-icon': showLink}">Design & Développement d'une monture équatoriale motorisée pilotable via un smartphone en Wifi.</a></p>
                     </Project>
                 </Job>
@@ -188,7 +182,6 @@ const showLink = inject('showLink');
     font-weight: 300;
     font-size: 0.8rem;
     letter-spacing: 0rem;
-    text-align: justify;
 }
 
 a {

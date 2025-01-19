@@ -18,7 +18,8 @@ const colorless = inject('colorless');
 <template>
     <div class="main">
         <div class="row">
-            <p class="font-subtitle team-icon" v-if="teamSize">Équipe: {{ teamSize }}</p>
+            <p class="font-subtitle team-icon" v-if="teamSize == 1">Solo</p>
+            <p class="font-subtitle team-icon" v-if="teamSize > 1">Équipe: {{ teamSize }}</p>
             <p class="font-subtitle" v-if="teamSize">-</p>
             <p class="tag" :class="{'tag-colorless': colorless}" v-for="(tag) in tags">{{ tag }}</p>
         </div>
