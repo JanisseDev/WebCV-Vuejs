@@ -16,7 +16,7 @@ const showLink = inject('showLink');
         <Header/>
         <div class="content">
             <div class="side-column">
-                <Skills title="Techniques" :skills="['C#', 'Rx', 'Swift', 'MongoDB', '.Net MAUI', 'Vue.js']"></Skills>
+                <Skills title="Techniques" :skills="['C#', 'Rx', 'Swift', 'Vue.js', '.Net MAUI', 'MongoDB']"></Skills>
                 <Skills title="Logiciels" :skills="['Git', 'Visual&nbsp;Studio', 'Xcode', 'Unity', 'Rider']"></Skills>
                 <Skills title="Loisirs" :skills="['Impression&nbsp;3D', 'Photographie', 'Réparation', 'Cinéma', 'Escape Games', 'Domotique']"></Skills>
                 <Skills title="Sports" :skills="['Badminton', 'Trail', 'Vélo']"></Skills>
@@ -74,7 +74,7 @@ const showLink = inject('showLink');
                 endMonth="Sept."
                 endYear="2015"
                 :places="['Lyon', 'France']"
-                jobType="CDI"
+                jobType="Alternance"
                 subtitle="Développeur jeu mobile AR"
                 teamSize="6"
                 :tags="['C#','Mobile', 'Git', 'AR', 'Unity']">
