@@ -18,7 +18,6 @@ defineProps({
             <h2 class="font-title">{{ title }}</h2>
             <div class="line"></div>
         </div>
-        <slot></slot>
     </div>
 </template>
 
@@ -28,8 +27,8 @@ defineProps({
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-    gap: 20px;
     flex: 0;
+    margin-bottom: -15px;
 }
 
 .title-container {

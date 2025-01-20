@@ -26,7 +26,7 @@ const showLink = inject('showLink');
             <div class="main-column">
                 <p class="description">Passionné et créatif, je suis constamment à la recherche de nouvelles technologies. Doté d'un tempérament calme et patient, ma proactivité me permet d'être efficace aussi bien en autonomie qu'au sein d'une équipe. Mon engagement envers l'innovation et mon approche méthodique feront de moi un atout précieux pour vos projets.</p>
                 
-                <Section title="DOSSIER DE COMPÉTENCES">
+                <Section title="DOSSIER DE COMPÉTENCES" />
                 <Job title="OPUSCOPE"
                 startMonth="Mai"
                 startYear="2021"
@@ -87,9 +87,8 @@ const showLink = inject('showLink');
                         <p class="description text-indent">Implémentation de features sur le moteur interne du studio.</p>
                     </Project>
                 </Job>
-                </Section>
 
-                <Section title="FORMATIONS">
+                <Section title="FORMATIONS" />
                 <div class="section-row">
                     <Formation :titles="['Licence Pro en alternance', '3D Temps Réel et Réalité Virtuelle']"
                     date="2014 - 2015"
@@ -101,9 +100,8 @@ const showLink = inject('showLink');
                     date="2012"
                     place="Lycée Jacob-Holtzer, Firminy (42)"/>
                 </div>
-                </Section>
 
-                <Section title="PROJETS PERSONNELS">
+                <Section title="PROJETS PERSONNELS" />
                 <Job title="TRIGGER MOVIE"
                 endYear="2025"
                 subtitle="Développeur fullstack Vue.js & PHP">
@@ -128,7 +126,6 @@ const showLink = inject('showLink');
                         <p class="description text-indent"><a href="https://github.com/JanisseDev/motorized-equatorial-mount" target="_blank" class="link" :class="{'link-icon': showLink}">Design & Développement d'une monture équatoriale motorisée pilotable via un smartphone en Wifi.</a></p>
                     </Project>
                 </Job>
-                </Section>
             </div>
         </div>
     </Page>

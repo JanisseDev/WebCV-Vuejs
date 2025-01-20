@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, provide, watch } from 'vue'
 import Cv from './Cv.vue'
+import Competences from './Competences.vue'
 
 const showLink = ref(true);
 provide('showLink', showLink);
